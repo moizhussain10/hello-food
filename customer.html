@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard - GoMeal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="customer.css">
+
+</head>
+<body>
+  <div class="sidebar">
+    <h2><i class="fas fa-utensils"></i> GoMeal</h2>
+    <ul>
+      <li><i class="fas fa-home"></i> Home</li>
+      <li><i class="fas fa-search"></i> Browse</li>
+      <li><i class="fas fa-star"></i> Popular</li>
+      <li><i class="fas fa-cart-shopping"></i> Cart</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="topbar">
+      <input type="text" id="searchBox" placeholder="Search restaurant...">
+      <button onclick="searchRestaurant()">Search</button>
+      <div class="profile">
+        <i class="fas fa-user-circle"></i> Customer
+      </div>
+    </div>
+
+    <div class="content-area">
+      <h3 id="restaurantResultName" class="section-title"></h3>
+
+      <div class="section">
+        <h2 class="section-title">Category</h2>
+        <ul id="categoryList" class="category-grid"></ul>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Menu Items</h2>
+        <div id="itemList" class="card-grid"></div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Your Cart</h2>
+        <ul id="cartList" class="cart-list"></ul>
+        <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="customer.js"></script>
+</body>
+</html>
